@@ -1,0 +1,12 @@
+# OS/IDE
+.DS_Store
+.vscode/
+
+# Builds
+/dist/
+/build/
+
+# Secrets (never commit)
+.env
+.env.*
+netlify/.env
