@@ -35,8 +35,8 @@
     <div class="chips" role="group" aria-label="Quick suggestions">
       <button class="chip" data-msg="tips for COMP 1537">COMP 1537 tips</button>
       <button class="chip" data-msg="tips for COMP 2714 SQL">COMP 2714 SQL</button>
-      <button class="chip" data-msg="COMP 2510 bitwise tips">COMP 2510</button>
-      <button class="chip" data-msg="COMP 2522 OOP tips">COMP 2522</button>
+      <button class="chip" data-msg="comp 2510 bitwise">COMP 2510 tips</button>
+      <button class="chip" data-msg="2522 lecture 1">COMP 2522 OOP tips</button>
       <button class="chip" data-msg="Networking subnetting practice">Networking</button>
       <button class="chip" data-msg="find study partners">Find study partners</button>
       <button class="chip" data-msg="time management for exams">Time management</button>
@@ -50,7 +50,7 @@
 
 
 
-  <!-- About Modal -->
+  <!-- Modal -->
   <div id="about-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="about-title" hidden>
     <div class="modal-dialog">
       <button class="modal-close" id="about-close" aria-label="Close">×</button>
@@ -68,41 +68,58 @@
   <!-- App scripts -->
   <script src="js/responses.js"></script>
   <script src="js/script.js"></script></body>
-  <!-- Resources Slide-out -->
+  <!-- Resources Slide out -->
 <aside id="resources-panel" class="slideout" hidden>
   <div class="slideout-content">
     <button id="close-resources" class="slideout-close">×</button>
-    <h2>Study Resources</h2>
     <ul>
-      <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs (Web/JS)</a></li>
-      <li><a href="https://www.sqlzoo.net/" target="_blank">SQLZoo (SQL practice)</a></li>
-      <li><a href="https://dbfiddle.uk/" target="_blank">DB Fiddle (query sandbox)</a></li>
-      <li><a href="https://roadmap.sh/" target="_blank">Roadmap.sh (learning paths)</a></li>
-      
-      <li><a href="https://www.bcit.ca/library/" target="_blank">BCIT Library &amp; Learning Commons</a></li>
-      <li><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp (projects)</a></li>
-    </ul>
-    <h2>Communities</h2>
+      <h3 class="study-title">Study Resources</h3>
+<ul class="study-list">
+  <li><a href="https://developer.mozilla.org/" target="_blank" class="study-mdn">MDN Web Docs (Web/JS)</a></li>
+  <li><a href="https://sqlzoo.net/" target="_blank" class="study-sqlzoo">SQLZoo (SQL practice)</a></li>
+  <li><a href="https://roadmap.sh/" target="_blank" class="study-roadmap">Roadmap.sh (learning paths)</a></li>
+  <li><a href="https://www.bcit.ca/library/" target="_blank" class="study-bcit">BCIT Library & Learning Commons</a></li>
+</ul>
 <ul>
-  <li>
-    <a href="https://discord.gg/EGRtv4YY" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f4bb.svg"
-           alt="Laptop" width="18" height="18"
-           style="vertical-align:middle; margin-right:6px;">
-      BCIT CST Unofficial Discord (Student Community)
-    </a>
-  </li>
-
-  <li>
-    <a href="https://discord.gg/yMAbVfDT" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg/1f680.svg"
-           alt="Rocket" width="18" height="18"
-           style="vertical-align:middle; margin-right:6px;">
-      BCIT Coding For All Discord (Open Tech Community)
-    </a>
-  </li>
+ <!--  Instagram Learning & BCIT Community -->
+ <li><h3 class="insta-title">Instagram Resources</h3></li>
+ <li><a class="insta-link" href="https://www.instagram.com/bcitcomputingclub/" target="_blank">BCIT Computing Club</a></li>
+ <li><a class="insta-link" href="https://www.instagram.com/bcitcodingforall/" target="_blank">BCIT Coding For All</a></li>
+ <li><a class="insta-link" href="https://www.instagram.com/jasonbcit/" target="_blank">jasonbcit</a></li>
+</li>
 </ul>
 
+      <h3 class="bcit-title"> BCIT & CST</h3>
+<ul class="bcit-list">
+  <li><a href="https://www.bcit.ca/library/" target="_blank" class="bcit-link">BCIT Library & Learning Commons</a></li>
+  <li><a href="https://learn.bcit.ca/" target="_blank" class="bcit-link">D2L (BCIT Learn)</a></li>
+  <li><a href="https://my.bcit.ca/" target="_blank" class="bcit-link">myBCIT Portal</a></li>
+</ul>
+<ul>
+  <li><h3 class="discord-title">Communities</h3></li>
+  <li><a class="discord-link" href="https://discord.gg/EGRtv4YY" target="_blank">
+    BCIT CST Discord (Student Community)
+  </a></li>
+  <li><a class="discord-link" href="https://discord.gg/yMAbVfDT" target="_blank">
+    BCIT Coding For All Discord (Open Tech Community)
+  </a></li>
+  
+   
+</ul>
+
+      <h3 class="docs-title"> Coding Docs & Practice</h3>
+<ul class="docs-list">
+  <li><a href="https://developer.mozilla.org/" target="_blank" class="mdn">MDN Web Docs (HTML/CSS/JS)</a></li>
+  <li><a href="https://www.w3schools.com/" target="_blank" class="w3">W3Schools (quick reference)</a></li>
+  <li><a href="https://sqlzoo.net/" target="_blank" class="sqlzoo">SQLZoo (practice)</a></li>
+  <li><a href="https://roadmap.sh/" target="_blank" class="roadmap">roadmap.sh (learning paths)</a></li>
+  <li><a href="https://www.freecodecamp.org/" target="_blank" class="fcc">freeCodeCamp (projects)</a></li>
+  <li><a href="https://replit.com/" target="_blank" class="replit">Replit (online IDE)</a></li>
+  <li><a href="https://codepen.io/" target="_blank" class="codepen">CodePen (frontend demos)</a></li>
+</ul>
+
+    </ul>
+   
   </div>
 </aside>
 </html>

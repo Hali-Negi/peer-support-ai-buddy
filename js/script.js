@@ -30,20 +30,24 @@ function addTyping() {
 
 function matchReply(text) {
   const q = text.toLowerCase();
+  const tokens = q.split(/\W+/).filter(Boolean);
   let best = null, bestScore = 0;
+
   for (const entry of window.RESPONSES) {
     let score = 0;
     for (const kw of entry.keywords) {
-      if (q.includes(kw.toLowerCase())) score++;
+      const k = kw.toLowerCase();
+      if (q.includes(k)) { score++; continue; }
+      const kTokens = k.split(/\W+/).filter(Boolean);
+      if (kTokens.some(t => tokens.includes(t))) score++;
     }
-    if (score > bestScore) {
-      bestScore = score;
-      best = entry.reply;
-    }
+    if (score > bestScore) { bestScore = score; best = entry.reply; }
   }
-  if (best && bestScore > 0) return best;
-  return window.FALLBACKS[Math.floor(Math.random() * window.FALLBACKS.length)];
+  return best && bestScore > 0
+    ? best
+    : window.FALLBACKS[Math.floor(Math.random() * window.FALLBACKS.length)];
 }
+
 
 async function botReply(text) {
   const typingRow = addTyping();

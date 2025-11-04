@@ -327,14 +327,282 @@ body.light .slideout-content a {
 }
 
 
-/* Discord */
-.slideout-content a[href*="discord"] {
-  color: #5865F2; /* Discord purple */
-  font-weight: 600;
+/* Discord Section Styling */
+.discord-title {
+  color: #5865F2; /* Discord purple (blurple) */
+  font-weight: 700;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
-.slideout-content a[href*="discord"]:hover {
-  text-decoration: underline;
+
+.discord-title::before {
+  font-size: 1.2rem;
 }
+
+.discord-link {
+  display: inline-block;
+  color: #7289da;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.discord-link::before {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.discord-link:hover {
+  color: #99aaff;
+  text-shadow: 0 0 8px rgba(114, 137, 218, 0.8);
+  transform: scale(1.03);
+}
+
+
+/*  Instagram Section */
+.insta-title {
+  background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.insta-link {
+  display: inline-block;
+  color: #E1306C; /* base pink tone */
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.insta-link::before {
+  content: "📸 ";
+  font-size: 1rem;
+  vertical-align: middle;
+}
+
+.insta-link:hover {
+  color: #feda75; /* bright yellow */
+  text-shadow: 0 0 10px rgba(250, 126, 30, 0.8);
+  transform: scale(1.03);
+}
+/* Section Title */
+.docs-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #61dafb; /* subtle cyan accent */
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Shared list style */
+.docs-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.docs-list a {
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  margin: 3px 0;
+  transition: all 0.3s ease;
+}
+
+/* Brand-based colors */
+.docs-list a.mdn {
+  color: #0060df; /* MDN blue */
+}
+.docs-list a.mdn:hover {
+  color: #0041a8;
+  text-shadow: 0 0 8px rgba(0, 96, 223, 0.4);
+}
+
+.docs-list a.w3 {
+  color: #04aa6d; /* W3 green */
+}
+.docs-list a.w3:hover {
+  color: #028a58;
+  text-shadow: 0 0 8px rgba(4, 170, 109, 0.4);
+}
+
+.docs-list a.sqlzoo {
+  color: #ff6600;
+}
+.docs-list a.sqlzoo:hover {
+  color: #cc5200;
+  text-shadow: 0 0 8px rgba(255, 102, 0, 0.4);
+}
+
+.docs-list a.roadmap {
+  color: #f8d210;
+}
+.docs-list a.roadmap:hover {
+  color: #d4b10b;
+  text-shadow: 0 0 8px rgba(248, 210, 16, 0.4);
+}
+
+.docs-list a.fcc {
+  color: #006400; /* FCC green */
+}
+.docs-list a.fcc:hover {
+  color: #00a400;
+  text-shadow: 0 0 8px rgba(0, 164, 0, 0.4);
+}
+
+.docs-list a.replit {
+  color: #ff7800; /* Replit orange */
+}
+.docs-list a.replit:hover {
+  color: #ff9b36;
+  text-shadow: 0 0 8px rgba(255, 120, 0, 0.5);
+}
+
+.docs-list a.codepen {
+  color: #ffffff;
+  background-color: #111;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: "Courier New", monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.docs-list a.codepen:hover {
+  background-color: #f0f0f0;
+  color: #111;
+}
+
+/*  Light Mode Adjustments */
+body.light .docs-title {
+  color: #0057ff;
+}
+body.light .docs-list a.codepen {
+  background-color: #f4f4f4;
+  color: #000;
+}
+body.light .docs-list a.codepen:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* BCIT & CST Section */
+
+.bcit-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #0099ff; /* lighter BCIT cyan accent for dark mode */
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* List styling */
+.bcit-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bcit-link {
+  color: #76b3e1; /* soft BCIT link blue */
+  font-weight: 500;
+  text-decoration: none;
+  display: inline-block;
+  margin: 3px 0;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.bcit-link:hover {
+  color: #00b4ff; /* BCIT bright blue */
+  text-shadow: 0 0 8px rgba(0, 180, 255, 0.6);
+}
+
+/* Light Mode Adjustments */
+body.light .bcit-title {
+  color: #003c71; /* BCIT brand navy */
+}
+
+body.light .bcit-link {
+  color: #003c71;
+}
+
+body.light .bcit-link:hover {
+  color: #0063bf;
+  text-shadow: 0 0 6px rgba(0, 60, 113, 0.3);
+}
+
+/* ---- Study Resources ---- */
+.study-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #4fa9ff; /* calm learning blue */
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.study-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.study-list a {
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+/* Individual Brand Accent Colors  */
+.study-mdn { color: #2767b0; }           /* MDN Blue */
+.study-sqlzoo { color: #4e9a06; }        /* SQLZoo green */
+.study-dbfiddle { color: #6a4cff; }      /* DBFiddle purple */
+.study-roadmap { color: #ffb400; }       /* Roadmap.sh amber */
+.study-bcit { color: #76b3e1; }          /* BCIT light blue */
+.study-freecodecamp { color: #006400; }  /* freeCodeCamp forest green */
+
+/* Hover effects */
+.study-list a:hover {
+  transform: translateX(4px);
+  text-shadow: 0 0 8px rgba(255,255,255,0.3);
+}
+
+/* Light mode adjustments */
+body.light .study-title {
+  color: #0063bf;
+}
+
+body.light .study-list a {
+  opacity: 0.9;
+}
+
+body.light .study-list a:hover {
+  opacity: 1;
+  text-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+
+
+
+
+
 
 
 
